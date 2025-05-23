@@ -3,6 +3,7 @@
 import argparse
 import os
 import shutil
+import sys
 from pathlib import Path
 
 VAULT_DIR = Path.home() / ".vault_storage"
@@ -59,7 +60,24 @@ def delete_entry(name):
     else:
         print(f"[!] No entry named '{name}' found.")
 
+def print_help():
+    help_text = """
+Vault CLI - Simple Backup & Restore Tool
+
+Usage:
+  vault save <source_path> <name>        :  Save files/folders to vault
+  vault load <destination_path> <name>   :  Load a saved vault
+  vault list                             :  List all saved vaults
+  vault delete <name>                    :  Delete a specific vault
+  vault --help                           :  Displays this help menu
+"""
+    print(help_text)
+
 def main():
+    if len(sys.argv) == 1 or (len(sys.argv) > 1 and sys.argv[1] == "--help"):
+        print_help()
+        return
+
     parser = argparse.ArgumentParser(description="Vault: Save & Load Project Snapshots")
     subparsers = parser.add_subparsers(dest='command')
 
