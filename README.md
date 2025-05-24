@@ -1,6 +1,6 @@
 # Vault - Simple Backup & Restore
 
-> vault.py is the final version. Other files were attempts at making vault more feature-rich.
+> vault.py is the final version. Other files were attempts at making vault more feature-rich, but there are errors.
 
 ## Setup
 
