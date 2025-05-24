@@ -1,5 +1,42 @@
 # Vault - Simple Backup & Restore
 
+> vault.py is the final version. Other files were attempts at making vault more feature-rich.
+
+## Setup
+
+### Prerequisites
+
+- Python installed on your machine.
+- A Linux-based operating system (tested on MacOS).
+
+### Steps
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/adnanxsalim/tool-vault.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd tool-vault
+```
+
+3. Update the `vault` script to make it executable:
+
+```bash
+chmod +x vault.py
+```
+
+4. Move the `vault` script to a directory in your PATH, such as `/usr/local/bin`:
+
+```bash
+sudo mv vault.py /usr/local/bin/vault
+```
+
+## Commands
+
 - ### vault save
 
 Saves the codebase from the specified source path, with the given name.
@@ -71,5 +108,7 @@ Usage:
 ```bash
 vault --help
 ```
+
+---
 
 Full documentation available at [my website](https://adnansal.im/work/tool-vault).
